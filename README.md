@@ -5,7 +5,7 @@
 
 > 1,插件引入
 ```
-<script src='mySimpleScroll.js'></script>
+<script src="mySimpleScroll.js"></script>
 ```
 
 > 2,使用方式
