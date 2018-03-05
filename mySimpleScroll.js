@@ -14,7 +14,7 @@
     scrollContainer.appendChild(virtualContentDiv);
     
     if(targetDiv.nextHtmlSibling) {
-       targetDiv.parentNode.insertBefore(targetDiv.nextHtmlSibling, targetDiv.nextSibling);
+       targetDiv.parentNode.insertBefore(scrollContainer, targetDiv.nextHtmlSibling);
     }else {
        targetDiv.parentNode.appendChild(scrollContainer);      
     }
