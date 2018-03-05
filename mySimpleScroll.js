@@ -1,7 +1,7 @@
 (function(document){
    'use strict';
     
-  var scroll = function(options) {
+  var LScroll = function(options) {
     var targetDiv = document.getElementById(options.selector),
     onlyChild =  targetDiv.firstElementChild,   
     onlyChildWidth = onlyChild.scrollWidth,
@@ -24,5 +24,16 @@
     });
   }
   
-  window.simpleScroll = scroll;
+  // CommonJS/AMD/CMD规范导出LScroll
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = LScroll
+  }
+  if (typeof define === 'function') {
+    define(function () {
+      return LScroll
+    })
+  }
+   
+  // 支持在页面上直接通过script标签直接引入LScroll插件
+  window.simpleScroll = LScroll;
 })(document);
