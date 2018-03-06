@@ -13,8 +13,8 @@
     virtualContentDiv.setAttribute('style','width:'+ onlyChildWidth +'px;height:15px;background:transparent;');
     scrollContainer.appendChild(virtualContentDiv);
     
-    if(targetDiv.nextHtmlSibling) {
-       targetDiv.parentNode.insertBefore(scrollContainer, targetDiv.nextHtmlSibling);
+    if(targetDiv.nextElementSibling) {
+       targetDiv.parentNode.insertBefore(scrollContainer, targetDiv.nextElementSibling);
     }else {
        targetDiv.parentNode.appendChild(scrollContainer);      
     }
